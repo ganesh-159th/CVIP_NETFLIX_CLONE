@@ -69,12 +69,12 @@ import {
       const {
         netflix: { genres },
       } = thunkAPI.getState();
-      const data = getRawData(
+      return  getRawData(
         `${TMDB_BASE_URL}/trending/${type}/week?api_key=${API_KEY}`,
         genres,
         true
       );
-      console.log(data);
+     
     }
   );
   
